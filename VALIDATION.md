@@ -1,6 +1,6 @@
 # Validation scorecard
 
-Generated for as-of date 2026-07-20.
+Generated for as-of date 2026-07-22.
 
 ## What this measures
 
@@ -800,7 +800,7 @@ Tested on 120 asset and currency combinations; 2 admitted.
 | Crude oil | USD | top | 9 | 44% | 55% | -10.0% | -24.8% to +5.3% | -6.1% (3) | rejected |
 | US dollar regime | INR | bottom | 4 | n/a | n/a | n/a | n/a | n/a | not enough data |
 | US dollar regime | INR | top | 13 | 62% | 52% | +4.3% | -1.9% to +10.5% | +2.3% (9) | rejected |
-| US dollar regime | USD | bottom | 6 | 50% | 49% | +1.1% | -2.3% to +4.6% | +3.7% (4) | rejected |
+| US dollar regime | USD | bottom | 6 | 50% | 49% | +0.8% | -2.9% to +4.4% | +3.7% (4) | rejected |
 | US dollar regime | USD | top | 11 | 64% | 53% | +2.4% | -1.9% to +6.5% | +1.2% (7) | rejected |
 | Emerging markets | INR | bottom | 5 | 60% | 52% | +4.6% | -5.7% to +14.8% | -0.3% (4) | rejected |
 | Emerging markets | INR | top | 14 | 43% | 49% | -2.6% | -9.1% to +3.5% | -2.0% (8) | rejected |
@@ -1390,7 +1390,7 @@ Tested on 60 asset and currency combinations; 1 admitted.
 | Biotech | USD | top | 3 | n/a | n/a | n/a | n/a | n/a | not enough data |
 | Bitcoin | INR | top | 0 | n/a | n/a | n/a | n/a | n/a | not enough data |
 | Bitcoin | USD | top | 0 | n/a | n/a | n/a | n/a | n/a | not enough data |
-| China equities | INR | top | 1 | n/a | n/a | n/a | n/a | n/a | not enough data |
+| China equities | INR | top | 2 | n/a | n/a | n/a | n/a | n/a | not enough data |
 | China equities | USD | top | 1 | n/a | n/a | n/a | n/a | n/a | not enough data |
 | Broad commodities | INR | top | 4 | n/a | n/a | n/a | n/a | n/a | not enough data |
 | Broad commodities | USD | top | 3 | n/a | n/a | n/a | n/a | n/a | not enough data |
