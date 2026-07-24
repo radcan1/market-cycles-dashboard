@@ -12,15 +12,18 @@
   .intro { color: #333; margin: 0.8rem 0 1rem; }
   .gist { font-size: 1.06rem; background: #f6f6f6; border-left: 4px solid #444;
           padding: 0.8rem 1rem; margin: 1rem 0 1.6rem; }
+  .refnote { margin: 0.4rem 0 1.2rem; }
   table { border-collapse: collapse; width: 100%; margin: 0.6rem 0 1.4rem; }
   caption { text-align: left; font-weight: 600; padding-bottom: 0.4rem; }
   th, td { border: 1px solid #999; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
   thead th { background: #f0f0f0; }
   .zone-top, .zone-bottom { font-weight: 600; }
   .note { color: #444; }
+  .secondary { color: #666; font-size: 0.92em; }
   details { margin: 0.4rem 0 1rem; }
   summary { cursor: pointer; font-weight: 600; }
-  tr.elevated-row td, tr.elevated-row th { background: #fdeeee; }
+  tr.tier-strong td, tr.tier-strong th { background: #eef7ee; }
+  tr.tier-moderate td, tr.tier-moderate th { background: #fdf8ea; }
   .replay-banner { background: #fff8e6; border: 1px solid #d9b45b; border-radius: 6px;
                    padding: 0.6rem 1rem; margin: 1rem 0 1.4rem; }
   .replay-banner ul { margin: 0.4rem 0; }
@@ -40,58 +43,36 @@
 </div>
 
 <p class="intro">
-  This page scores 30 investments — stocks, bonds, gold and more — from 0 to 100
-  for how close each looks to a market <strong>top</strong> (overpriced) or
-  <strong>bottom</strong> (a possible bargain); higher means a stronger warning.
-  Each shows two scores: a <strong>broad</strong> one (every signal) and a
-  <strong>validated</strong> one (only signals with a proven track record, and
-  "none" where there are none). Trust the validated one.
+  This page tracks 30 investments for signs of a market top (overpriced) or bottom
+  (a possible bargain). Every claim is tagged by how much evidence backs it —
+  <strong>Strong</strong>, <strong>Moderate</strong>, or <strong>Thin</strong> — and that
+  tag, not a raw number, is the thing to trust: two assets' scores are rarely built from
+  the same indicator, so comparing the numbers directly is misleading.
+  <a href="../../reference.html">New here? See what's tracked, what each term means, and how
+  scores are built.</a>
 </p>
 
 <p class="gist">No investment had enough fresh data to score this week; every score is paused until the data sources recover.</p>
 
-<p class="note">See the <a href="track-record.html">track record of every call this page has made</a>.</p>
+<p class="refnote note">See the <a href="../../track-record.html">track record of every call this page has made</a>.</p>
 
-<h2>Closest to a top zone</h2>
-<p class="note">The six investments closest to a top, most overheated first. Click a name for its detail.</p>
-<table>
-  <caption>Six asset classes closest to a top zone, in rupee terms, as of Friday 31 March 2000</caption>
-  <thead>
-    <tr>
-      <th scope="col">Asset class</th>
-      <th scope="col">Top risk</th>
-      <th scope="col">How extreme</th>
-      <th scope="col">Validated top signal</th>
-      <th scope="col">Indicators in a zone</th>
-      <th scope="col">Strongest flag</th>
-      <th scope="col">Change since the previous run</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+<h2>Strong evidence this week</h2>
+<p class="note">Claims backed by a real, stable track record — most weeks this is short or empty. Newest first.</p>
+<p>Nothing this week. Most weeks look like this.</p>
 
-<h2>Closest to a bottom zone</h2>
-<p class="note">The six investments closest to a bottom, most beaten-down first.</p>
-<table>
-  <caption>Six asset classes closest to a bottom zone, in rupee terms, as of Friday 31 March 2000</caption>
-  <thead>
-    <tr>
-      <th scope="col">Asset class</th>
-      <th scope="col">Bottom opportunity</th>
-      <th scope="col">How extreme</th>
-      <th scope="col">Validated bottom signal</th>
-      <th scope="col">Indicators in a zone</th>
-      <th scope="col">Strongest flag</th>
-      <th scope="col">Change since the previous run</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
+<h2>Moderate evidence this week</h2>
+<p class="note">Claims with some track record, but thinner or less stable than Strong — worth a look, held loosely. Newest first.</p>
+<p>Nothing this week.</p>
 
-<h2>All 30 asset classes</h2>
-<p class="note">Every investment, grouped by type, with both the broad and validated scores.</p>
+<h2>No signal this week</h2>
+<details>
+  <summary>0 asset classes with no validated claim on either side — shown for completeness</summary>
+  <p class="note">No indicator has passed its backtest on these, so there is nothing to report beyond breadth. Click any name in the full board below for its detail.</p>
+  <p></p>
+</details>
+
+<h2>Full board — all 30 asset classes</h2>
+<p class="note">Every investment, grouped by type, with both readings. Reference material, not this week's news — see the sections above for that.</p>
 <details>
   <summary>Show the full table of all 30 asset classes</summary>
   <table class="family-table">
@@ -534,11 +515,13 @@
   </table>
 </details>
 
+
 <h2>Asset class detail</h2>
-<p class="note">One entry per investment. Open "all indicators" for the full breakdown.</p>
+<p class="note">One entry per investment with something to report, open by default; the rest are collapsed below each family.</p>
 <h3>Equity indices — regional and broad</h3>
-<h4 id="slot-equities_global">Global equities</h4>
-<p>Global equities: insufficient data: 6 of 23 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+<details>
+  <summary id="slot-equities_global">Global equities — no signal this week</summary>
+  <p>Global equities: insufficient data: 6 of 23 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with VT, data through 2000-03-31.
@@ -992,8 +975,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-us_large_cap">US large cap</h4>
-<p>US large cap: insufficient data: 10 of 27 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-us_large_cap">US large cap — no signal this week</summary>
+  <p>US large cap: insufficient data: 10 of 27 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with SPY, data through 2000-03-31.
@@ -1174,7 +1160,7 @@
         <td>-1.04</td>
         <td class="zone-neutral">neutral</td>
         <td>2000-03-31</td>
-        <td>admitted, hit 71% versus a 56% base rate, edge +8 points, 17 firings, out of sample +8 points</td>
+        <td>admitted, hit 71% versus a 56% base rate, edge +8 points, 17 firings, out of sample +8 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">vix term backwardation</th>
@@ -1519,8 +1505,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-small_cap">US small cap</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-small_cap">US small cap — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with IWM, data through no data.
@@ -1794,8 +1783,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-india">India equities</h4>
-<p>India equities: insufficient data: 1 of 17 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-india">India equities — no signal this week</summary>
+  <p>India equities: insufficient data: 1 of 17 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with INDA, data through 2000-03-31.
@@ -2141,8 +2133,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-india_midcap">India midcap</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-india_midcap">India midcap — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with MID150BEES.NS, data through no data.
@@ -2416,8 +2411,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-china">China equities</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-china">China equities — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with MCHI, data through no data.
@@ -2691,8 +2689,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-japan">Japan equities</h4>
-<p>Japan equities: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-japan">Japan equities — no signal this week</summary>
+  <p>Japan equities: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with EWJ, data through 2000-03-31.
@@ -2966,8 +2967,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-europe">Europe equities</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-europe">Europe equities — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with VGK, data through no data.
@@ -3241,8 +3245,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-emerging_markets">Emerging markets</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-emerging_markets">Emerging markets — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with VWO, data through no data.
@@ -3516,8 +3523,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-mag7">Magnificent 7</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-mag7">Magnificent 7 — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with MAGS, data through no data.
@@ -3791,9 +3801,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>US equity sectors</h3>
-<h4 id="slot-semiconductors">Semiconductors</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+<details>
+  <summary id="slot-semiconductors">Semiconductors — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with SMH, data through no data.
@@ -4085,8 +4098,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-technology">Technology</h4>
-<p>Technology: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-technology">Technology — no signal this week</summary>
+  <p>Technology: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XLK, data through 2000-03-31.
@@ -4360,8 +4376,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-financials">Financials</h4>
-<p>Financials: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-financials">Financials — no signal this week</summary>
+  <p>Financials: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XLF, data through 2000-03-31.
@@ -4635,8 +4654,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-healthcare">Healthcare</h4>
-<p>Healthcare: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-healthcare">Healthcare — no signal this week</summary>
+  <p>Healthcare: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XLV, data through 2000-03-31.
@@ -4910,8 +4932,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-biotech">Biotech</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-biotech">Biotech — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XBI, data through no data.
@@ -5185,8 +5210,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-energy">Energy</h4>
-<p>Energy: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-energy">Energy — no signal this week</summary>
+  <p>Energy: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XLE, data through 2000-03-31.
@@ -5460,8 +5488,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-industrials">Industrials</h4>
-<p>Industrials: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-industrials">Industrials — no signal this week</summary>
+  <p>Industrials: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XLI, data through 2000-03-31.
@@ -5753,8 +5784,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-consumer_discretionary">Consumer discretionary</h4>
-<p>Consumer discretionary: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-consumer_discretionary">Consumer discretionary — no signal this week</summary>
+  <p>Consumer discretionary: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XLY, data through 2000-03-31.
@@ -6028,8 +6062,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-consumer_staples">Consumer staples</h4>
-<p>Consumer staples: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-consumer_staples">Consumer staples — no signal this week</summary>
+  <p>Consumer staples: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XLP, data through 2000-03-31.
@@ -6303,8 +6340,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-utilities">Utilities</h4>
-<p>Utilities: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-utilities">Utilities — no signal this week</summary>
+  <p>Utilities: insufficient data: 1 of 13 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with XLU, data through 2000-03-31.
@@ -6578,9 +6618,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>Bonds and credit</h3>
-<h4 id="slot-treasuries_long">US Treasuries, long duration</h4>
-<p>US Treasuries, long duration: insufficient data: 1 of 15 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+<details>
+  <summary id="slot-treasuries_long">US Treasuries, long duration — no signal this week</summary>
+  <p>US Treasuries, long duration: insufficient data: 1 of 15 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with TLT, data through 2000-03-28.
@@ -6890,8 +6933,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-credit_ig">US investment-grade credit</h4>
-<p>US investment-grade credit: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-credit_ig">US investment-grade credit — no signal this week</summary>
+  <p>US investment-grade credit: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with LQD, data through 2000-03-31.
@@ -7183,8 +7229,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-credit_hy">US high-yield credit</h4>
-<p>US high-yield credit: insufficient data: 2 of 16 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-credit_hy">US high-yield credit — no signal this week</summary>
+  <p>US high-yield credit: insufficient data: 2 of 16 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with HYG, data through 2000-03-31.
@@ -7512,9 +7561,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>Real assets and commodities</h3>
-<h4 id="slot-real_estate">Global real estate (REITs)</h4>
-<p>Global real estate (REITs): insufficient data: 2 of 15 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+<details>
+  <summary id="slot-real_estate">Global real estate (REITs) — no signal this week</summary>
+  <p>Global real estate (REITs): insufficient data: 2 of 15 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with VNQ, data through 2000-03-31.
@@ -7824,8 +7876,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-gold">Gold</h4>
-<p>Gold: insufficient data: 1 of 17 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-gold">Gold — no signal this week</summary>
+  <p>Gold: insufficient data: 1 of 17 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with GLD, data through 2000-03-28.
@@ -8171,8 +8226,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-silver">Silver</h4>
-<p>Silver: insufficient data: 1 of 15 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-silver">Silver — no signal this week</summary>
+  <p>Silver: insufficient data: 1 of 15 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with SLV, data through 2000-03-28.
@@ -8482,8 +8540,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-commodities">Broad commodities</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-commodities">Broad commodities — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with DBC, data through no data.
@@ -8757,8 +8818,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-crude_oil">Crude oil</h4>
-<p>Crude oil: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+
+</details>
+<details>
+  <summary id="slot-crude_oil">Crude oil — no signal this week</summary>
+  <p>Crude oil: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with USO, data through 2000-03-28.
@@ -9050,9 +9114,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>Crypto</h3>
-<h4 id="slot-bitcoin">Bitcoin</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+<details>
+  <summary id="slot-bitcoin">Bitcoin — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with IBIT, data through no data.
@@ -9344,9 +9411,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>Currencies</h3>
-<h4 id="slot-dollar">US dollar regime</h4>
-<p>US dollar regime: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+<details>
+  <summary id="slot-dollar">US dollar regime — no signal this week</summary>
+  <p>US dollar regime: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with UUP, data through 2000-03-28.
@@ -9639,6 +9709,8 @@
   </table>
 </details>
 
+</details>
+
 <h2>Method and caveats</h2>
 <p>
   This page estimates how close each asset class is to conditions that have
@@ -9652,17 +9724,12 @@
   separately and never combined into a single verdict.
 </p>
 <p>
-  Two readings sit side by side. The breadth reading (top risk and bottom
-  opportunity) weights every indicator equally, so it summarises what the
-  indicators collectively say rather than proving that any one works. The
-  validated reading counts only indicators that passed the event-study engine
-  on that specific asset — measured against an era-matched base rate, checked
-  out of sample, and discounted for resting on few firings — weighted by the
-  edge they earned. It reads "none" wherever nothing has yet earned its place,
-  which is most assets, and that emptiness is deliberately shown rather than
-  hidden. Where the two disagree, the validated reading is the one to trust; the
-  breadth reading is context. Each indicator's full track record, including the
-  rejections, is in the per-asset detail and the validation scorecard.
+  Every claim is tagged Strong, Moderate, or Thin by how much backtested evidence
+  supports it — full definitions, the assets and tickers tracked, and every
+  indicator used are on the <a href="../../reference.html">reference page</a>.
+  Two readings sit behind every score: a broad one (every indicator weighted equally)
+  and a validated one (only indicators that passed the backtest on that specific asset).
+  Where they disagree, the validated reading and its evidence tier are what to trust.
 </p>
 <p>
   Full method: see the design specification and the implementation

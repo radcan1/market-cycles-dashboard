@@ -12,15 +12,18 @@
   .intro { color: #333; margin: 0.8rem 0 1rem; }
   .gist { font-size: 1.06rem; background: #f6f6f6; border-left: 4px solid #444;
           padding: 0.8rem 1rem; margin: 1rem 0 1.6rem; }
+  .refnote { margin: 0.4rem 0 1.2rem; }
   table { border-collapse: collapse; width: 100%; margin: 0.6rem 0 1.4rem; }
   caption { text-align: left; font-weight: 600; padding-bottom: 0.4rem; }
   th, td { border: 1px solid #999; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
   thead th { background: #f0f0f0; }
   .zone-top, .zone-bottom { font-weight: 600; }
   .note { color: #444; }
+  .secondary { color: #666; font-size: 0.92em; }
   details { margin: 0.4rem 0 1rem; }
   summary { cursor: pointer; font-weight: 600; }
-  tr.elevated-row td, tr.elevated-row th { background: #fdeeee; }
+  tr.tier-strong td, tr.tier-strong th { background: #eef7ee; }
+  tr.tier-moderate td, tr.tier-moderate th { background: #fdf8ea; }
   .replay-banner { background: #fff8e6; border: 1px solid #d9b45b; border-radius: 6px;
                    padding: 0.6rem 1rem; margin: 1rem 0 1.4rem; }
   .replay-banner ul { margin: 0.4rem 0; }
@@ -40,166 +43,58 @@
 </div>
 
 <p class="intro">
-  This page scores 30 investments — stocks, bonds, gold and more — from 0 to 100
-  for how close each looks to a market <strong>top</strong> (overpriced) or
-  <strong>bottom</strong> (a possible bargain); higher means a stronger warning.
-  Each shows two scores: a <strong>broad</strong> one (every signal) and a
-  <strong>validated</strong> one (only signals with a proven track record, and
-  "none" where there are none). Trust the validated one.
+  This page tracks 30 investments for signs of a market top (overpriced) or bottom
+  (a possible bargain). Every claim is tagged by how much evidence backs it —
+  <strong>Strong</strong>, <strong>Moderate</strong>, or <strong>Thin</strong> — and that
+  tag, not a raw number, is the thing to trust: two assets' scores are rarely built from
+  the same indicator, so comparing the numbers directly is misleading.
+  <a href="../../reference.html">New here? See what's tracked, what each term means, and how
+  scores are built.</a>
 </p>
 
-<p class="gist">This week the proven signals flag US Treasuries, long duration (75) and Industrials (52) as overheated, near a possible top — while the broader market still looks calm. One also reads Technology (74), Global equities (57) and US large cap (55) as beaten-down, near a bottom. Each rests on only a handful of past cases (as few as 5 past cases), so treat it as the best evidence, not certainty.</p>
+<p class="gist">This week&#39;s strongest evidence points to a possible bottom on Biotech. See Strong evidence below for the full case behind each.</p>
 
-<p class="note">See the <a href="track-record.html">track record of every call this page has made</a>.</p>
+<p class="refnote note">See the <a href="../../track-record.html">track record of every call this page has made</a>.</p>
 
-<h2>Closest to a top zone</h2>
-<p class="note">The six investments closest to a top, most overheated first. Click a name for its detail.</p>
+<h2>Strong evidence this week</h2>
+<p class="note">Claims backed by a real, stable track record — most weeks this is short or empty. Newest first.</p>
 <table>
-  <caption>Six asset classes closest to a top zone, in rupee terms, as of Monday 31 October 2022</caption>
+  <caption>Strong-evidence claims, in rupee terms, as of Monday 31 October 2022</caption>
   <thead>
     <tr>
       <th scope="col">Asset class</th>
-      <th scope="col">Top risk</th>
-      <th scope="col">How extreme</th>
-      <th scope="col">Validated top signal</th>
-      <th scope="col">Indicators in a zone</th>
-      <th scope="col">Strongest flag</th>
-      <th scope="col">Change since the previous run</th>
+      <th scope="col">Side</th>
+      <th scope="col">Driving indicator</th>
+      <th scope="col">Track record</th>
+      <th scope="col">Signal since</th>
+      <th scope="col">What this means</th>
     </tr>
   </thead>
   <tbody>
-    <tr class="elevated-row">
-      <th scope="row"><a href="#slot-energy">Energy</a></th>
-      <td>52</td>
-      <td>elevated</td>
-      <td>none</td>
-      <td>3 of 13</td>
-      <td>price vs 200wma z (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-dollar">US dollar regime</a></th>
-      <td>32</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>0 of 14</td>
-      <td>none</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-commodities">Broad commodities</a></th>
-      <td>31</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>2 of 13</td>
-      <td>euphoria rollover (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-crude_oil">Crude oil</a></th>
-      <td>26</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>2 of 14</td>
-      <td>euphoria rollover (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-india">India equities</a></th>
-      <td>26</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>2 of 17</td>
-      <td>monthly rsi divergence (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-india_midcap">India midcap</a></th>
-      <td>26</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>1 of 13</td>
-      <td>monthly rsi divergence (unproven)</td>
-      <td>not applicable</td>
+    <tr class="tier-strong">
+      <th scope="row"><a href="#slot-biotech">Biotech</a> <span class="secondary">(reading 29)</span></th>
+      <td>bottom</td>
+      <td>drawdown percentile</td>
+      <td>admitted, hit 75% versus a 50% base rate, edge +27 points, 8 firings, out of sample +30 points</td>
+      <td>unknown</td>
+      <td>Backed by a real track record — worth a closer look.</td>
     </tr>
   </tbody>
 </table>
 
-<h2>Closest to a bottom zone</h2>
-<p class="note">The six investments closest to a bottom, most beaten-down first.</p>
-<table>
-  <caption>Six asset classes closest to a bottom zone, in rupee terms, as of Monday 31 October 2022</caption>
-  <thead>
-    <tr>
-      <th scope="col">Asset class</th>
-      <th scope="col">Bottom opportunity</th>
-      <th scope="col">How extreme</th>
-      <th scope="col">Validated bottom signal</th>
-      <th scope="col">Indicators in a zone</th>
-      <th scope="col">Strongest flag</th>
-      <th scope="col">Change since the previous run</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="elevated-row">
-      <th scope="row"><a href="#slot-china">China equities</a></th>
-      <td>66</td>
-      <td>elevated</td>
-      <td>none</td>
-      <td>7 of 13</td>
-      <td>drawdown percentile (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr class="elevated-row">
-      <th scope="row"><a href="#slot-treasuries_long">US Treasuries, long duration</a></th>
-      <td>50</td>
-      <td>elevated</td>
-      <td>none</td>
-      <td>6 of 15</td>
-      <td>drawdown percentile (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-credit_ig">US investment-grade credit</a></th>
-      <td>42</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>4 of 14</td>
-      <td>price vs m2 (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-real_estate">Global real estate (REITs)</a></th>
-      <td>39</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>3 of 15</td>
-      <td>mortgage momentum (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-semiconductors">Semiconductors</a></th>
-      <td>38</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>3 of 14</td>
-      <td>capitulation flush (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="#slot-emerging_markets">Emerging markets</a></th>
-      <td>33</td>
-      <td>moderate</td>
-      <td>none</td>
-      <td>2 of 13</td>
-      <td>price vs m2 (unproven)</td>
-      <td>not applicable</td>
-    </tr>
-  </tbody>
-</table>
+<h2>Moderate evidence this week</h2>
+<p class="note">Claims with some track record, but thinner or less stable than Strong — worth a look, held loosely. Newest first.</p>
+<p>Nothing this week.</p>
 
-<h2>All 30 asset classes</h2>
-<p class="note">Every investment, grouped by type, with both the broad and validated scores.</p>
+<h2>No signal this week</h2>
+<details>
+  <summary>27 asset classes with no validated claim on either side — shown for completeness</summary>
+  <p class="note">No indicator has passed its backtest on these, so there is nothing to report beyond breadth. Click any name in the full board below for its detail.</p>
+  <p>Broad commodities, China equities, Consumer discretionary, Consumer staples, Crude oil, Emerging markets, Energy, Europe equities, Financials, Global equities, Global real estate (REITs), Gold, Healthcare, India equities, India midcap, Industrials, Japan equities, Semiconductors, Silver, Technology, US Treasuries, long duration, US dollar regime, US high-yield credit, US investment-grade credit, US large cap, US small cap, Utilities</p>
+</details>
+
+<h2>Full board — all 30 asset classes</h2>
+<p class="note">Every investment, grouped by type, with both readings. Reference material, not this week's news — see the sections above for that.</p>
 <details>
   <summary>Show the full table of all 30 asset classes</summary>
   <table class="family-table">
@@ -642,11 +537,13 @@
   </table>
 </details>
 
+
 <h2>Asset class detail</h2>
-<p class="note">One entry per investment. Open "all indicators" for the full breakdown.</p>
+<p class="note">One entry per investment with something to report, open by default; the rest are collapsed below each family.</p>
 <h3>Equity indices — regional and broad</h3>
-<h4 id="slot-equities_global">Global equities</h4>
-<p>Global equities shows low top-side risk and moderate bottom-side opportunity, from 23 indicators of which 2 are currently in a zone. The active flags are stocks bonds ratio (top zone), vix term backwardation (bottom zone) and stocks bonds ratio (top zone).</p>
+<details>
+  <summary id="slot-equities_global">Global equities — no signal this week</summary>
+  <p>Global equities shows low top-side risk and moderate bottom-side opportunity, from 23 indicators of which 2 are currently in a zone. The active flags are stocks bonds ratio (top zone), vix term backwardation (bottom zone) and stocks bonds ratio (top zone).</p>
 <p class="note">
   Broad score: top 11, bottom 29. Validated: top 0, bottom 57.
   Tracked with VT, data through 2022-11-04.
@@ -674,7 +571,7 @@
         <td>-1.38</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 86% versus a 54% base rate, edge +9 points, 7 firings, out of sample +10 points</td>
+        <td>admitted, hit 86% versus a 54% base rate, edge +9 points, 7 firings, out of sample +10 points, weight 0.42 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">price vs 200wma z</th>
@@ -737,7 +634,7 @@
         <td>-0.81</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 67% versus a 43% base rate, edge +13 points, 6 firings, out of sample +12 points</td>
+        <td>admitted, hit 67% versus a 43% base rate, edge +13 points, 6 firings, out of sample +12 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">capitulation flush</th>
@@ -818,7 +715,7 @@
         <td>-1.10</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 75% versus a 54% base rate, edge +10 points, 12 firings, out of sample +9 points</td>
+        <td>admitted, hit 75% versus a 54% base rate, edge +10 points, 12 firings, out of sample +9 points, weight 0.58 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">vix term backwardation</th>
@@ -897,7 +794,7 @@
         <td>-1.21</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 75% versus a 49% base rate, edge +10 points, 8 firings, out of sample +10 points</td>
+        <td>admitted, hit 75% versus a 49% base rate, edge +10 points, 8 firings, out of sample +10 points, weight 0.44 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">price vs 200wma z</th>
@@ -960,7 +857,7 @@
         <td>-0.81</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 67% versus a 47% base rate, edge +12 points, 6 firings, out of sample +10 points</td>
+        <td>admitted, hit 67% versus a 47% base rate, edge +12 points, 6 firings, out of sample +10 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">capitulation flush</th>
@@ -1041,7 +938,7 @@
         <td>-1.10</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 67% versus a 49% base rate, edge +11 points, 12 firings, out of sample +11 points</td>
+        <td>admitted, hit 67% versus a 49% base rate, edge +11 points, 12 firings, out of sample +11 points, weight 0.56 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">vix term backwardation</th>
@@ -1100,8 +997,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-us_large_cap">US large cap</h4>
-<p>US large cap shows low top-side risk and low bottom-side opportunity, from 27 indicators of which 2 are currently in a zone. The active flags are stocks bonds ratio (top zone), vix term backwardation (bottom zone) and stocks bonds ratio (top zone).</p>
+
+</details>
+<details>
+  <summary id="slot-us_large_cap">US large cap — no signal this week</summary>
+  <p>US large cap shows low top-side risk and low bottom-side opportunity, from 27 indicators of which 2 are currently in a zone. The active flags are stocks bonds ratio (top zone), vix term backwardation (bottom zone) and stocks bonds ratio (top zone).</p>
 <p class="note">
   Broad score: top 16, bottom 25. Validated: top none, bottom 55.
   Tracked with SPY, data through 2022-11-04.
@@ -1282,7 +1182,7 @@
         <td>-1.10</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 71% versus a 56% base rate, edge +8 points, 17 firings, out of sample +8 points</td>
+        <td>admitted, hit 71% versus a 56% base rate, edge +8 points, 17 firings, out of sample +8 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">vix term backwardation</th>
@@ -1541,7 +1441,7 @@
         <td>-1.10</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 67% versus a 49% base rate, edge +9 points, 12 firings, out of sample +10 points</td>
+        <td>admitted, hit 67% versus a 49% base rate, edge +9 points, 12 firings, out of sample +10 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">vix term backwardation</th>
@@ -1627,8 +1527,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-small_cap">US small cap</h4>
-<p>US small cap shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
+
+</details>
+<details>
+  <summary id="slot-small_cap">US small cap — no signal this week</summary>
+  <p>US small cap shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
 <p class="note">
   Broad score: top 3, bottom 12. Validated: top 18, bottom none.
   Tracked with IWM, data through 2022-11-04.
@@ -1683,7 +1586,7 @@
         <td>0.00</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 80% versus a 56% base rate, edge +12 points, 5 firings, out of sample +15 points</td>
+        <td>admitted, hit 80% versus a 56% base rate, edge +12 points, 5 firings, out of sample +15 points, weight 0.55 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">monthly rsi divergence</th>
@@ -1701,7 +1604,7 @@
         <td>0.00</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 71% versus a 49% base rate, edge +15 points, 7 firings, out of sample +7 points</td>
+        <td>admitted, hit 71% versus a 49% base rate, edge +15 points, 7 firings, out of sample +7 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">volume capitulation</th>
@@ -1719,7 +1622,7 @@
         <td>0.36</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 70% versus a 56% base rate, edge +7 points, 10 firings, out of sample +7 points</td>
+        <td>admitted, hit 70% versus a 56% base rate, edge +7 points, 10 firings, out of sample +7 points, weight 0.45 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">capitulation flush</th>
@@ -1852,7 +1755,7 @@
         <td>0.36</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 80% versus a 58% base rate, edge +8 points, 10 firings, out of sample +8 points</td>
+        <td>admitted, hit 80% versus a 58% base rate, edge +8 points, 10 firings, out of sample +8 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">capitulation flush</th>
@@ -1902,8 +1805,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-india">India equities</h4>
-<p>India equities shows moderate top-side risk and low bottom-side opportunity, from 17 indicators of which 2 are currently in a zone. The active flags are monthly rsi divergence (top zone), euphoria rollover (top zone) and monthly rsi divergence (top zone).</p>
+
+</details>
+<details>
+  <summary id="slot-india">India equities — no signal this week</summary>
+  <p>India equities shows moderate top-side risk and low bottom-side opportunity, from 17 indicators of which 2 are currently in a zone. The active flags are monthly rsi divergence (top zone), euphoria rollover (top zone) and monthly rsi divergence (top zone).</p>
 <p class="note">
   Broad score: top 26, bottom 8. Validated: no validated signal on this asset yet.
   Tracked with INDA, data through 2022-11-04.
@@ -2249,8 +2155,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-india_midcap">India midcap</h4>
-<p>India midcap shows moderate top-side risk and low bottom-side opportunity, from 13 indicators of which 1 are currently in a zone. The active flags are monthly rsi divergence (top zone) and monthly rsi divergence (top zone).</p>
+
+</details>
+<details>
+  <summary id="slot-india_midcap">India midcap — no signal this week</summary>
+  <p>India midcap shows moderate top-side risk and low bottom-side opportunity, from 13 indicators of which 1 are currently in a zone. The active flags are monthly rsi divergence (top zone) and monthly rsi divergence (top zone).</p>
 <p class="note">
   Broad score: top 26, bottom 0. Validated: top none, bottom 0.
   Tracked with MID150BEES.NS, data through 2022-11-04.
@@ -2456,7 +2365,7 @@
         <td>0.00</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 60% versus a 42% base rate, edge +20 points, 5 firings, out of sample +24 points</td>
+        <td>admitted, hit 60% versus a 42% base rate, edge +20 points, 5 firings, out of sample +24 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">volume capitulation</th>
@@ -2524,8 +2433,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-china">China equities</h4>
-<p>China equities shows none top-side risk and elevated bottom-side opportunity, from 13 indicators of which 7 are currently in a zone. The active flags are drawdown percentile (bottom zone), price vs 200wma z (bottom zone) and price vs m2 (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-china">China equities — no signal this week</summary>
+  <p>China equities shows none top-side risk and elevated bottom-side opportunity, from 13 indicators of which 7 are currently in a zone. The active flags are drawdown percentile (bottom zone), price vs 200wma z (bottom zone) and price vs m2 (bottom zone).</p>
 <p class="note">
   Broad score: top 0, bottom 66. Validated: no validated signal on this asset yet.
   Tracked with MCHI, data through 2022-11-04.
@@ -2799,8 +2711,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-japan">Japan equities</h4>
-<p>Japan equities shows none top-side risk and moderate bottom-side opportunity, from 13 indicators of which 1 are currently in a zone. The active flags are price vs m2 (bottom zone) and price vs m2 (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-japan">Japan equities — no signal this week</summary>
+  <p>Japan equities shows none top-side risk and moderate bottom-side opportunity, from 13 indicators of which 1 are currently in a zone. The active flags are price vs m2 (bottom zone) and price vs m2 (bottom zone).</p>
 <p class="note">
   Broad score: top 0, bottom 28. Validated: no validated signal on this asset yet.
   Tracked with EWJ, data through 2022-11-04.
@@ -3074,8 +2989,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-europe">Europe equities</h4>
-<p>Europe equities shows none top-side risk and moderate bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are price vs m2 (bottom zone), price vs 200wma z (bottom zone) and price vs 200wma z (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-europe">Europe equities — no signal this week</summary>
+  <p>Europe equities shows none top-side risk and moderate bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are price vs m2 (bottom zone), price vs 200wma z (bottom zone) and price vs 200wma z (bottom zone).</p>
 <p class="note">
   Broad score: top 0, bottom 29. Validated: top none, bottom 0.
   Tracked with VGK, data through 2022-11-04.
@@ -3272,7 +3190,7 @@
         <td>0.00</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 80% versus a 46% base rate, edge +10 points, 5 firings, out of sample +11 points</td>
+        <td>admitted, hit 80% versus a 46% base rate, edge +10 points, 5 firings, out of sample +11 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">coppock</th>
@@ -3349,8 +3267,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-emerging_markets">Emerging markets</h4>
-<p>Emerging markets shows none top-side risk and moderate bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are price vs m2 (bottom zone), price vs 200wma z (bottom zone) and price vs 200wma z (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-emerging_markets">Emerging markets — no signal this week</summary>
+  <p>Emerging markets shows none top-side risk and moderate bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are price vs m2 (bottom zone), price vs 200wma z (bottom zone) and price vs 200wma z (bottom zone).</p>
 <p class="note">
   Broad score: top 0, bottom 33. Validated: no validated signal on this asset yet.
   Tracked with VWO, data through 2022-11-04.
@@ -3624,8 +3545,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-mag7">Magnificent 7</h4>
-<p>This asset had no data at this date — its history had not begun yet.</p>
+
+</details>
+<details>
+  <summary id="slot-mag7">Magnificent 7 — no signal this week</summary>
+  <p>This asset had no data at this date — its history had not begun yet.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with MAGS, data through no data.
@@ -3899,9 +3823,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>US equity sectors</h3>
-<h4 id="slot-semiconductors">Semiconductors</h4>
-<p>Semiconductors shows low top-side risk and moderate bottom-side opportunity, from 14 indicators of which 3 are currently in a zone. The active flags are capitulation flush (bottom zone), bullish divergence deep (bottom zone) and price vs 200dma z (bottom zone).</p>
+<details>
+  <summary id="slot-semiconductors">Semiconductors — no signal this week</summary>
+  <p>Semiconductors shows low top-side risk and moderate bottom-side opportunity, from 14 indicators of which 3 are currently in a zone. The active flags are capitulation flush (bottom zone), bullish divergence deep (bottom zone) and price vs 200dma z (bottom zone).</p>
 <p class="note">
   Broad score: top 8, bottom 38. Validated: top 0, bottom none.
   Tracked with SMH, data through 2022-11-04.
@@ -3929,7 +3856,7 @@
         <td>-1.74</td>
         <td class="zone-bottom">bottom zone</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 86% versus a 49% base rate, edge +37 points, 7 firings, out of sample +33 points</td>
+        <td>admitted, hit 86% versus a 49% base rate, edge +37 points, 7 firings, out of sample +33 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">price vs 200wma z</th>
@@ -3938,7 +3865,7 @@
         <td>-1.34</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-11-04</td>
-        <td>admitted, hit 82% versus a 50% base rate, edge +20 points, 11 firings, out of sample +31 points</td>
+        <td>admitted, hit 82% versus a 50% base rate, edge +20 points, 11 firings, out of sample +31 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">drawdown percentile</th>
@@ -4132,7 +4059,7 @@
         <td>-1.43</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-11-04</td>
-        <td>admitted, hit 83% versus a 55% base rate, edge +23 points, 6 firings, out of sample +29 points</td>
+        <td>admitted, hit 83% versus a 55% base rate, edge +23 points, 6 firings, out of sample +29 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">drawdown percentile</th>
@@ -4245,8 +4172,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-technology">Technology</h4>
-<p>Technology shows low top-side risk and moderate bottom-side opportunity, from 13 indicators of which 1 are currently in a zone. The active flags are bullish divergence deep (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-technology">Technology — no signal this week</summary>
+  <p>Technology shows low top-side risk and moderate bottom-side opportunity, from 13 indicators of which 1 are currently in a zone. The active flags are bullish divergence deep (bottom zone).</p>
 <p class="note">
   Broad score: top 8, bottom 30. Validated: top 0, bottom 74.
   Tracked with XLK, data through 2022-11-04.
@@ -4416,7 +4346,7 @@
         <td>-1.38</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-11-04</td>
-        <td>admitted, hit 86% versus a 52% base rate, edge +11 points, 7 firings, out of sample +16 points</td>
+        <td>admitted, hit 86% versus a 52% base rate, edge +11 points, 7 firings, out of sample +16 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">drawdown percentile</th>
@@ -4425,7 +4355,7 @@
         <td>-1.48</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 80% versus a 51% base rate, edge +21 points, 5 firings, out of sample +24 points</td>
+        <td>admitted, hit 80% versus a 51% base rate, edge +21 points, 5 firings, out of sample +24 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">runup percentile</th>
@@ -4520,8 +4450,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-financials">Financials</h4>
-<p>Financials shows none top-side risk and low bottom-side opportunity, from 13 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
+
+</details>
+<details>
+  <summary id="slot-financials">Financials — no signal this week</summary>
+  <p>Financials shows none top-side risk and low bottom-side opportunity, from 13 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
 <p class="note">
   Broad score: top 0, bottom 9. Validated: no validated signal on this asset yet.
   Tracked with XLF, data through 2022-11-04.
@@ -4795,8 +4728,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-healthcare">Healthcare</h4>
-<p>Healthcare shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are monthly rsi divergence (top zone), price vs m2 (top zone) and monthly rsi divergence (top zone).</p>
+
+</details>
+<details>
+  <summary id="slot-healthcare">Healthcare — no signal this week</summary>
+  <p>Healthcare shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are monthly rsi divergence (top zone), price vs m2 (top zone) and monthly rsi divergence (top zone).</p>
 <p class="note">
   Broad score: top 24, bottom 1. Validated: no validated signal on this asset yet.
   Tracked with XLV, data through 2022-11-04.
@@ -5070,6 +5006,8 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h4 id="slot-biotech">Biotech</h4>
 <p>Biotech shows none top-side risk and low bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are coppock (bottom zone) and drawdown percentile (bottom zone).</p>
 <p class="note">
@@ -5099,7 +5037,7 @@
         <td>-0.41</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 62% versus a 47% base rate, edge +15 points, 8 firings, out of sample +39 points</td>
+        <td>admitted, hit 62% versus a 47% base rate, edge +15 points, 8 firings, out of sample +39 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">price vs 200wma z</th>
@@ -5117,7 +5055,7 @@
         <td>-1.79</td>
         <td class="zone-bottom">bottom zone</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 71% versus a 50% base rate, edge +30 points, 7 firings, out of sample +33 points</td>
+        <td>admitted, hit 71% versus a 50% base rate, edge +30 points, 7 firings, out of sample +33 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">runup percentile</th>
@@ -5284,7 +5222,7 @@
         <td>-0.20</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 67% versus a 49% base rate, edge +26 points, 9 firings, out of sample +36 points</td>
+        <td>admitted, hit 67% versus a 49% base rate, edge +26 points, 9 firings, out of sample +36 points, weight 0.32 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">price vs 200wma z</th>
@@ -5302,7 +5240,7 @@
         <td>-1.68</td>
         <td class="zone-bottom">bottom zone</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 75% versus a 50% base rate, edge +27 points, 8 firings, out of sample +30 points</td>
+        <td>admitted, hit 75% versus a 50% base rate, edge +27 points, 8 firings, out of sample +30 points, weight 0.31 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">runup percentile</th>
@@ -5356,7 +5294,7 @@
         <td>0.00</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 67% versus a 52% base rate, edge +31 points, 9 firings, out of sample +28 points</td>
+        <td>admitted, hit 67% versus a 52% base rate, edge +31 points, 9 firings, out of sample +28 points, weight 0.38 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">bullish divergence deep</th>
@@ -5454,8 +5392,10 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-energy">Energy</h4>
-<p>Energy shows elevated top-side risk and none bottom-side opportunity, from 13 indicators of which 3 are currently in a zone. The active flags are price vs 200wma z (top zone), runup percentile (top zone) and monthly rsi divergence (top zone).</p>
+
+<details>
+  <summary id="slot-energy">Energy — no signal this week</summary>
+  <p>Energy shows elevated top-side risk and none bottom-side opportunity, from 13 indicators of which 3 are currently in a zone. The active flags are price vs 200wma z (top zone), runup percentile (top zone) and monthly rsi divergence (top zone).</p>
 <p class="note">
   Broad score: top 52, bottom 0. Validated: no validated signal on this asset yet.
   Tracked with XLE, data through 2022-11-04.
@@ -5729,8 +5669,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-industrials">Industrials</h4>
-<p>Industrials shows low top-side risk and low bottom-side opportunity, from 14 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
+
+</details>
+<details>
+  <summary id="slot-industrials">Industrials — no signal this week</summary>
+  <p>Industrials shows low top-side risk and low bottom-side opportunity, from 14 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
 <p class="note">
   Broad score: top 6, bottom 9. Validated: top 52, bottom none.
   Tracked with XLI, data through 2022-11-04.
@@ -5963,7 +5906,7 @@
         <td>1.05</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 83% versus a 55% base rate, edge +9 points, 6 firings, out of sample +9 points</td>
+        <td>admitted, hit 83% versus a 55% base rate, edge +9 points, 6 firings, out of sample +9 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">capitulation flush</th>
@@ -6022,8 +5965,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-consumer_discretionary">Consumer discretionary</h4>
-<p>Consumer discretionary shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
+
+</details>
+<details>
+  <summary id="slot-consumer_discretionary">Consumer discretionary — no signal this week</summary>
+  <p>Consumer discretionary shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
 <p class="note">
   Broad score: top 7, bottom 21. Validated: no validated signal on this asset yet.
   Tracked with XLY, data through 2022-11-04.
@@ -6069,7 +6015,7 @@
         <td>-1.52</td>
         <td class="zone-bottom">bottom zone</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 80% versus a 48% base rate, edge +23 points, 5 firings, out of sample +23 points</td>
+        <td>admitted, hit 80% versus a 48% base rate, edge +23 points, 5 firings, out of sample +23 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">runup percentile</th>
@@ -6339,8 +6285,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-consumer_staples">Consumer staples</h4>
-<p>Consumer staples shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 1 are currently in a zone. The active flags are monthly rsi divergence (top zone) and monthly rsi divergence (top zone).</p>
+
+</details>
+<details>
+  <summary id="slot-consumer_staples">Consumer staples — no signal this week</summary>
+  <p>Consumer staples shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 1 are currently in a zone. The active flags are monthly rsi divergence (top zone) and monthly rsi divergence (top zone).</p>
 <p class="note">
   Broad score: top 21, bottom 4. Validated: no validated signal on this asset yet.
   Tracked with XLP, data through 2022-11-04.
@@ -6404,7 +6353,7 @@
         <td>-1.75</td>
         <td class="zone-bottom">bottom zone</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 64% versus a 47% base rate, edge +3 points, 22 firings, out of sample +4 points</td>
+        <td>admitted, hit 64% versus a 47% base rate, edge +3 points, 22 firings, out of sample +4 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">coppock</th>
@@ -6614,8 +6563,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-utilities">Utilities</h4>
-<p>Utilities shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
+
+</details>
+<details>
+  <summary id="slot-utilities">Utilities — no signal this week</summary>
+  <p>Utilities shows low top-side risk and low bottom-side opportunity, from 13 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
 <p class="note">
   Broad score: top 6, bottom 15. Validated: no validated signal on this asset yet.
   Tracked with XLU, data through 2022-11-04.
@@ -6715,7 +6667,7 @@
         <td>0.00</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 80% versus a 56% base rate, edge +14 points, 5 firings, out of sample +33 points</td>
+        <td>admitted, hit 80% versus a 56% base rate, edge +14 points, 5 firings, out of sample +33 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">bullish divergence deep</th>
@@ -6889,9 +6841,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>Bonds and credit</h3>
-<h4 id="slot-treasuries_long">US Treasuries, long duration</h4>
-<p>US Treasuries, long duration shows low top-side risk and elevated bottom-side opportunity, from 15 indicators of which 6 are currently in a zone. The active flags are drawdown percentile (bottom zone), price vs m2 (bottom zone) and price vs 200wma z (bottom zone).</p>
+<details>
+  <summary id="slot-treasuries_long">US Treasuries, long duration — no signal this week</summary>
+  <p>US Treasuries, long duration shows low top-side risk and elevated bottom-side opportunity, from 15 indicators of which 6 are currently in a zone. The active flags are drawdown percentile (bottom zone), price vs m2 (bottom zone) and price vs 200wma z (bottom zone).</p>
 <p class="note">
   Broad score: top 11, bottom 50. Validated: top 75, bottom none.
   Tracked with TLT, data through 2022-11-04.
@@ -7036,7 +6991,7 @@
         <td>1.50</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 100% versus a 54% base rate, edge +13 points, 5 firings, out of sample +13 points</td>
+        <td>admitted, hit 100% versus a 54% base rate, edge +13 points, 5 firings, out of sample +13 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">cot commercial percentile</th>
@@ -7187,7 +7142,7 @@
         <td>1.50</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 80% versus a 50% base rate, edge +10 points, 5 firings, out of sample +12 points</td>
+        <td>admitted, hit 80% versus a 50% base rate, edge +10 points, 5 firings, out of sample +12 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">cot commercial percentile</th>
@@ -7201,8 +7156,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-credit_ig">US investment-grade credit</h4>
-<p>US investment-grade credit shows none top-side risk and moderate bottom-side opportunity, from 14 indicators of which 4 are currently in a zone. The active flags are price vs m2 (bottom zone), drawdown percentile (bottom zone) and price vs 200wma z (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-credit_ig">US investment-grade credit — no signal this week</summary>
+  <p>US investment-grade credit shows none top-side risk and moderate bottom-side opportunity, from 14 indicators of which 4 are currently in a zone. The active flags are price vs m2 (bottom zone), drawdown percentile (bottom zone) and price vs 200wma z (bottom zone).</p>
 <p class="note">
   Broad score: top 0, bottom 42. Validated: top 0, bottom none.
   Tracked with LQD, data through 2022-11-04.
@@ -7489,13 +7447,16 @@
         <td>-0.20</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted at half weight, hit 71% versus a 54% base rate, edge +4 points, 7 firings, out of sample -3 points</td>
+        <td>admitted at half weight, hit 71% versus a 54% base rate, edge +4 points, 7 firings, out of sample -3 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
     </tbody>
   </table>
 </details>
-<h4 id="slot-credit_hy">US high-yield credit</h4>
-<p>US high-yield credit shows low top-side risk and low bottom-side opportunity, from 16 indicators of which 1 are currently in a zone. The active flags are price vs m2 (bottom zone) and price vs m2 (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-credit_hy">US high-yield credit — no signal this week</summary>
+  <p>US high-yield credit shows low top-side risk and low bottom-side opportunity, from 16 indicators of which 1 are currently in a zone. The active flags are price vs m2 (bottom zone) and price vs m2 (bottom zone).</p>
 <p class="note">
   Broad score: top 8, bottom 20. Validated: no validated signal on this asset yet.
   Tracked with HYG, data through 2022-11-04.
@@ -7823,9 +7784,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>Real assets and commodities</h3>
-<h4 id="slot-real_estate">Global real estate (REITs)</h4>
-<p>Global real estate (REITs) shows none top-side risk and moderate bottom-side opportunity, from 15 indicators of which 3 are currently in a zone. The active flags are mortgage momentum (bottom zone), bullish divergence deep (bottom zone) and price vs 200wma z (bottom zone).</p>
+<details>
+  <summary id="slot-real_estate">Global real estate (REITs) — no signal this week</summary>
+  <p>Global real estate (REITs) shows none top-side risk and moderate bottom-side opportunity, from 15 indicators of which 3 are currently in a zone. The active flags are mortgage momentum (bottom zone), bullish divergence deep (bottom zone) and price vs 200wma z (bottom zone).</p>
 <p class="note">
   Broad score: top 0, bottom 39. Validated: no validated signal on this asset yet.
   Tracked with VNQ, data through 2022-11-04.
@@ -8135,8 +8099,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-gold">Gold</h4>
-<p>Gold shows low top-side risk and moderate bottom-side opportunity, from 17 indicators of which 3 are currently in a zone. The active flags are cot commercial percentile (bottom zone), india gold premium (bottom zone) and price vs m2 (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-gold">Gold — no signal this week</summary>
+  <p>Gold shows low top-side risk and moderate bottom-side opportunity, from 17 indicators of which 3 are currently in a zone. The active flags are cot commercial percentile (bottom zone), india gold premium (bottom zone) and price vs m2 (bottom zone).</p>
 <p class="note">
   Broad score: top 2, bottom 26. Validated: no validated signal on this asset yet.
   Tracked with GLD, data through 2022-11-04.
@@ -8482,8 +8449,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-silver">Silver</h4>
-<p>Silver shows low top-side risk and moderate bottom-side opportunity, from 15 indicators of which 3 are currently in a zone. The active flags are price vs m2 (bottom zone), coppock (bottom zone) and cot commercial percentile (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-silver">Silver — no signal this week</summary>
+  <p>Silver shows low top-side risk and moderate bottom-side opportunity, from 15 indicators of which 3 are currently in a zone. The active flags are price vs m2 (bottom zone), coppock (bottom zone) and cot commercial percentile (bottom zone).</p>
 <p class="note">
   Broad score: top 0, bottom 31. Validated: no validated signal on this asset yet.
   Tracked with SLV, data through 2022-11-04.
@@ -8793,8 +8763,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-commodities">Broad commodities</h4>
-<p>Broad commodities shows moderate top-side risk and low bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are euphoria rollover (top zone), price vs 200wma z (top zone) and price vs 200wma z (top zone).</p>
+
+</details>
+<details>
+  <summary id="slot-commodities">Broad commodities — no signal this week</summary>
+  <p>Broad commodities shows moderate top-side risk and low bottom-side opportunity, from 13 indicators of which 2 are currently in a zone. The active flags are euphoria rollover (top zone), price vs 200wma z (top zone) and price vs 200wma z (top zone).</p>
 <p class="note">
   Broad score: top 31, bottom 3. Validated: no validated signal on this asset yet.
   Tracked with DBC, data through 2022-11-04.
@@ -8840,7 +8813,7 @@
         <td>0.00</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-10-31</td>
-        <td>admitted, hit 80% versus a 37% base rate, edge +16 points, 5 firings, out of sample +18 points</td>
+        <td>admitted, hit 80% versus a 37% base rate, edge +16 points, 5 firings, out of sample +18 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">runup percentile</th>
@@ -9068,8 +9041,11 @@
     </tbody>
   </table>
 </details>
-<h4 id="slot-crude_oil">Crude oil</h4>
-<p>Crude oil shows moderate top-side risk and low bottom-side opportunity, from 14 indicators of which 2 are currently in a zone. The active flags are cot commercial percentile (bottom zone), euphoria rollover (top zone) and cot commercial percentile (bottom zone).</p>
+
+</details>
+<details>
+  <summary id="slot-crude_oil">Crude oil — no signal this week</summary>
+  <p>Crude oil shows moderate top-side risk and low bottom-side opportunity, from 14 indicators of which 2 are currently in a zone. The active flags are cot commercial percentile (bottom zone), euphoria rollover (top zone) and cot commercial percentile (bottom zone).</p>
 <p class="note">
   Broad score: top 26, bottom 18. Validated: no validated signal on this asset yet.
   Tracked with USO, data through 2022-11-04.
@@ -9361,9 +9337,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>Crypto</h3>
-<h4 id="slot-bitcoin">Bitcoin</h4>
-<p>Bitcoin: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
+<details>
+  <summary id="slot-bitcoin">Bitcoin — no signal this week</summary>
+  <p>Bitcoin: insufficient data: 1 of 14 indicators available, below the 50% coverage this dashboard requires before it will print a number.</p>
 <p class="note">
   Broad score: top no reading, bottom no reading. Validated: no validated signal on this asset yet.
   Tracked with IBIT, data through 2022-10-31.
@@ -9655,9 +9634,12 @@
     </tbody>
   </table>
 </details>
+
+</details>
 <h3>Currencies</h3>
-<h4 id="slot-dollar">US dollar regime</h4>
-<p>US dollar regime shows moderate top-side risk and low bottom-side opportunity, from 14 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
+<details>
+  <summary id="slot-dollar">US dollar regime — no signal this week</summary>
+  <p>US dollar regime shows moderate top-side risk and low bottom-side opportunity, from 14 indicators of which 0 are currently in a zone. No individual indicator is currently inside a zone.</p>
 <p class="note">
   Broad score: top 32, bottom 5. Validated: no validated signal on this asset yet.
   Tracked with UUP, data through 2022-11-04.
@@ -9784,7 +9766,7 @@
         <td>0.00</td>
         <td class="zone-neutral">neutral</td>
         <td>2022-11-04</td>
-        <td>admitted, hit 86% versus a 50% base rate, edge +4 points, 7 firings, out of sample +4 points</td>
+        <td>admitted, hit 86% versus a 50% base rate, edge +4 points, 7 firings, out of sample +4 points, weight 1.00 of this asset&#39;s validated score</td>
       </tr>
       <tr>
         <th scope="row">blowoff reversal</th>
@@ -9950,6 +9932,8 @@
   </table>
 </details>
 
+</details>
+
 <h2>Method and caveats</h2>
 <p>
   This page estimates how close each asset class is to conditions that have
@@ -9963,17 +9947,12 @@
   separately and never combined into a single verdict.
 </p>
 <p>
-  Two readings sit side by side. The breadth reading (top risk and bottom
-  opportunity) weights every indicator equally, so it summarises what the
-  indicators collectively say rather than proving that any one works. The
-  validated reading counts only indicators that passed the event-study engine
-  on that specific asset — measured against an era-matched base rate, checked
-  out of sample, and discounted for resting on few firings — weighted by the
-  edge they earned. It reads "none" wherever nothing has yet earned its place,
-  which is most assets, and that emptiness is deliberately shown rather than
-  hidden. Where the two disagree, the validated reading is the one to trust; the
-  breadth reading is context. Each indicator's full track record, including the
-  rejections, is in the per-asset detail and the validation scorecard.
+  Every claim is tagged Strong, Moderate, or Thin by how much backtested evidence
+  supports it — full definitions, the assets and tickers tracked, and every
+  indicator used are on the <a href="../../reference.html">reference page</a>.
+  Two readings sit behind every score: a broad one (every indicator weighted equally)
+  and a validated one (only indicators that passed the backtest on that specific asset).
+  Where they disagree, the validated reading and its evidence tier are what to trust.
 </p>
 <p>
   Full method: see the design specification and the implementation
