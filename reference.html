@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Market Cycles — how this works</title>
+<style>
+  body { font-family: -apple-system, Helvetica, Arial, sans-serif; line-height: 1.5;
+         max-width: 62rem; margin: 2rem auto; padding: 0 1rem; color: #111; background: #fff; }
+  h1 { margin-bottom: 0.6rem; }
+  h2 { margin-top: 2rem; }
+  .intro { color: #333; margin: 0.8rem 0 1.2rem; }
+  table { border-collapse: collapse; width: 100%; margin: 0.6rem 0 1.4rem; }
+  caption { text-align: left; font-weight: 600; padding-bottom: 0.4rem; }
+  th, td { border: 1px solid #999; padding: 0.4rem 0.6rem; text-align: left; vertical-align: top; }
+  thead th { background: #f0f0f0; }
+  .note { color: #444; }
+  details { margin: 0.4rem 0 1rem; }
+  summary { cursor: pointer; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<h1>Market Cycles — how this works</h1>
+
+<p class="intro">
+  Every term, ticker, and indicator used on the dashboard, in one place.
+  <a href="index.html">Back to the dashboard.</a>
+</p>
+
+<h2>Glossary</h2>
+<table>
+  <caption>Terms used throughout the dashboard</caption>
+  <thead>
+    <tr>
+      <th scope="col">Term</th>
+      <th scope="col">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Top risk / Bottom opportunity</th>
+      <td>How close an asset looks to a major top or bottom, 0 to 100. Two separate readings, never combined, because tops and bottoms behave differently — bottoms are sharp, tops are slow.</td>
+    </tr>
+    <tr>
+      <th scope="row">Broad</th>
+      <td>A reading built from every indicator on that asset, weighted equally, whether or not any of them has a real track record. A summary of what the indicators collectively say, not proof that any of them works.</td>
+    </tr>
+    <tr>
+      <th scope="row">Validated</th>
+      <td>A reading built only from indicators that passed a decades-long backtest on that specific asset. Reads &#34;none&#34; wherever nothing has earned its place yet — true for most assets, most weeks.</td>
+    </tr>
+    <tr>
+      <th scope="row">Evidence tier — Strong / Moderate / Thin</th>
+      <td>How much to trust a specific claim. Strong: a validated indicator with a stable, sizeable track record. Moderate: validated, but resting on a thin sample or unstable since 2015. Thin: no validated indicator at all — most of the board, most weeks.</td>
+    </tr>
+    <tr>
+      <th scope="row">Elevated / moderate / low / none</th>
+      <td>How extreme a broad reading is, in plain words: none at 0, low above 0, moderate from 25, elevated from 50, very high from 75.</td>
+    </tr>
+    <tr>
+      <th scope="row">Flags in a zone</th>
+      <td>How many of an asset&#39;s own indicators are currently flagging a top or bottom condition, out of how many are tracked for it.</td>
+    </tr>
+    <tr>
+      <th scope="row">Firings</th>
+      <td>How many separate times, across all of market history, an indicator has entered its zone — its sample size. Fewer than 5 and it is never scored at all.</td>
+    </tr>
+    <tr>
+      <th scope="row">Edge</th>
+      <td>How much better, or worse, an indicator&#39;s signal performed against what that asset typically does over the same period, in percentage points.</td>
+    </tr>
+    <tr>
+      <th scope="row">Out of sample</th>
+      <td>The same edge, measured only on data since 2015 — after the indicator&#39;s rule was written. Confirms the edge is not an artefact of the exact history it was built on.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Evidence tiers</h2>
+<p class="note">The one scale that decides how much to trust a claim, used everywhere on the dashboard instead of comparing raw scores across assets.</p>
+<table>
+  <caption>What Strong, Moderate and Thin mean, and what to do with each</caption>
+  <thead>
+    <tr>
+      <th scope="col">Tier</th>
+      <th scope="col">What it takes to earn it</th>
+      <th scope="col">What to do with it</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Strong</th>
+      <td>Admitted, stable out of sample, and resting on at least 8 independent past cases.</td>
+      <td>Backed by a real track record — worth a closer look.</td>
+    </tr>
+    <tr>
+      <th scope="row">Moderate</th>
+      <td>Admitted, but either resting on a thinner sample (5-7 cases) or flagged unstable — its edge weakened or reversed after 2015.</td>
+      <td>Some track record behind it, but thinner than ideal — worth a look, held loosely.</td>
+    </tr>
+    <tr>
+      <th scope="row">Thin</th>
+      <td>No indicator has passed the backtest on this asset and side at all. The ordinary case.</td>
+      <td>No proven signal here — shown for completeness, not something to act on.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Assets and what tracks them</h2>
+<p class="note">All 30 asset classes, the ETF used to track each, and how many indicators are computed for it.</p>
+<table>
+  <caption>Every asset class on the dashboard</caption>
+  <thead>
+    <tr>
+      <th scope="col">Asset class</th>
+      <th scope="col">Tracked with</th>
+      <th scope="col">Native currency</th>
+      <th scope="col">Indicators tracked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Global real estate (REITs)</th>
+      <td>VNQ</td>
+      <td>USD</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">US Treasuries, long duration</th>
+      <td>TLT</td>
+      <td>USD</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">US investment-grade credit</th>
+      <td>LQD</td>
+      <td>USD</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th scope="row">US high-yield credit</th>
+      <td>HYG</td>
+      <td>USD</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th scope="row">Global equities</th>
+      <td>VT</td>
+      <td>USD</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th scope="row">Gold</th>
+      <td>GLD</td>
+      <td>USD</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th scope="row">Silver</th>
+      <td>SLV</td>
+      <td>USD</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th scope="row">Broad commodities</th>
+      <td>DBC</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Crude oil</th>
+      <td>USO</td>
+      <td>USD</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th scope="row">Bitcoin</th>
+      <td>IBIT</td>
+      <td>USD</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th scope="row">US dollar regime</th>
+      <td>UUP</td>
+      <td>USD</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th scope="row">US large cap</th>
+      <td>SPY</td>
+      <td>USD</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th scope="row">India equities</th>
+      <td>INDA</td>
+      <td>USD</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th scope="row">China equities</th>
+      <td>MCHI</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Japan equities</th>
+      <td>EWJ</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Europe equities</th>
+      <td>VGK</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">US small cap</th>
+      <td>IWM</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Emerging markets</th>
+      <td>VWO</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Magnificent 7</th>
+      <td>MAGS</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">India midcap</th>
+      <td>MID150BEES.NS</td>
+      <td>INR</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Semiconductors</th>
+      <td>SMH</td>
+      <td>USD</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th scope="row">Technology</th>
+      <td>XLK</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Financials</th>
+      <td>XLF</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Healthcare</th>
+      <td>XLV</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Biotech</th>
+      <td>XBI</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Energy</th>
+      <td>XLE</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Industrials</th>
+      <td>XLI</td>
+      <td>USD</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th scope="row">Consumer discretionary</th>
+      <td>XLY</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Consumer staples</th>
+      <td>XLP</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th scope="row">Utilities</th>
+      <td>XLU</td>
+      <td>USD</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Indicators used</h2>
+<p class="note">Every indicator the dashboard computes, grouped by family, with what it measures in plain terms and how many assets it currently passes its backtest on.</p>
+<details>
+  <summary>Breadth (2)</summary>
+  <table>
+    <caption>Breadth indicators</caption>
+    <thead>
+      <tr>
+        <th scope="col">Indicator</th>
+        <th scope="col">Side</th>
+        <th scope="col">What it measures</th>
+        <th scope="col">Currently admitted on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">defensive leadership</th>
+        <td>top</td>
+        <td>Consumer staples and utilities outperforming the broad index: money staying in equities while hiding in the defensives.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">equal weight breadth</th>
+        <td>top</td>
+        <td>The average stock against the index: the half-year change in the equal-weight-to-cap-weight S&amp;P ratio, as a z-score of its trailing five years.</td>
+        <td>0 assets</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+<details>
+  <summary>Macro (8)</summary>
+  <table>
+    <caption>Macro indicators</caption>
+    <thead>
+      <tr>
+        <th scope="col">Indicator</th>
+        <th scope="col">Side</th>
+        <th scope="col">What it measures</th>
+        <th scope="col">Currently admitted on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">financial stress percentile</th>
+        <td>top and bottom</td>
+        <td>The Chicago Fed&#39;s National Financial Conditions Index — a weekly composite of over a hundred credit, funding and volatility measures, running since 1971.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">inflation regime</th>
+        <td>top</td>
+        <td>Market-expected inflation — the 10-year breakeven rate — ranked against its own history since 2003.</td>
+        <td>2 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">inr stress z</th>
+        <td>bottom</td>
+        <td>The rupee falling unusually fast — the quarterly change in USDINR as a z-score of its trailing three years.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">margin debt yoy</th>
+        <td>top</td>
+        <td>Broker margin debt, year over year — leverage euphoria as a top marker.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">mortgage momentum</th>
+        <td>top and bottom</td>
+        <td>How fast US mortgage rates have moved over the trailing year, weekly since 1971.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">permits yoy</th>
+        <td>top and bottom</td>
+        <td>US housing permits, year over year — the housing cycle&#39;s own throttle, monthly since 1960 and lagged one month for publication.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">sahm rule</th>
+        <td>top</td>
+        <td>The Sahm rule — the three-month average unemployment rate rising half a point above its own twelve-month low, the most reliable simple marker that a recession has already begun.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">yield curve uninvert</th>
+        <td>top</td>
+        <td>The 10-year minus 2-year Treasury spread steepening back through zero after a sustained inversion.</td>
+        <td>0 assets</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+<details>
+  <summary>Positioning (3)</summary>
+  <table>
+    <caption>Positioning indicators</caption>
+    <thead>
+      <tr>
+        <th scope="col">Indicator</th>
+        <th scope="col">Side</th>
+        <th scope="col">What it measures</th>
+        <th scope="col">Currently admitted on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">cot commercial percentile</th>
+        <td>top and bottom</td>
+        <td>CFTC commercial net positioning as a percentile of its trailing three years.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">fii flow z</th>
+        <td>top and bottom</td>
+        <td>Foreign portfolio flows into Indian equities at their extremes: the trailing quarter&#39;s net FPI investment as a z-score of its own five years.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">retail washout</th>
+        <td>bottom</td>
+        <td>Retail abandonment deep in a drawdown: the off-exchange share of volume (a free FINRA proxy for retail participation, sampled monthly since 2009) collapses at least 1.5 standard deviations below its own one-year norm while price sits 25%+ below its one-year high.</td>
+        <td>0 assets</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+<details>
+  <summary>Sentiment (6)</summary>
+  <table>
+    <caption>Sentiment indicators</caption>
+    <thead>
+      <tr>
+        <th scope="col">Indicator</th>
+        <th scope="col">Side</th>
+        <th scope="col">What it measures</th>
+        <th scope="col">Currently admitted on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">aaii spread z</th>
+        <td>top and bottom</td>
+        <td>The AAII weekly survey&#39;s bullish minus bearish fraction, as a z-score of its trailing five years.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">crypto fear greed</th>
+        <td>top and bottom</td>
+        <td>The alternative.me Crypto Fear and Greed index, 0 to 100, blending volatility, momentum, social activity and dominance. Extreme greed is the top-side condition, extreme fear the bottom-side one.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">india gold premium</th>
+        <td>top and bottom</td>
+        <td>The premium Indian buyers pay for gold over the world price, measured as the ratio of the domestic gold ETF to the dollar gold price through the rupee lens, z-scored against a trailing two years.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">india vix percentile</th>
+        <td>top and bottom</td>
+        <td>India&#39;s own fear gauge, published by NSE since 2008 and spanning both the global financial crisis and the 2020 crash (each above 80).</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">vix level percentile</th>
+        <td>top and bottom</td>
+        <td>The VIX level. High readings mean the market is paying up for protection — fear, historically a bottom-side condition — and sustained low readings mean complacency.</td>
+        <td>4 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">vix term backwardation</th>
+        <td>bottom</td>
+        <td>The VIX term structure: the front index against its three-month counterpart.</td>
+        <td>0 assets</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+<details>
+  <summary>Technical (11)</summary>
+  <table>
+    <caption>Technical indicators</caption>
+    <thead>
+      <tr>
+        <th scope="col">Indicator</th>
+        <th scope="col">Side</th>
+        <th scope="col">What it measures</th>
+        <th scope="col">Currently admitted on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">blowoff reversal</th>
+        <td>top</td>
+        <td>The first violent crack after a parabolic run — the silver 2011 and bitcoin 2021 species of top, where parabolas break rather than consolidate.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">bullish divergence deep</th>
+        <td>bottom</td>
+        <td>Weekly bullish divergence counted only deep inside a hole: from at least 25% below the one-year high, price makes a lower low while weekly momentum makes a higher low — the market falling with less force.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">capitulation flush</th>
+        <td>bottom</td>
+        <td>A one-day selling climax counted only deep inside a hole: price at least 25% below its one-year high, and on the day at least two of — drawdown past 35%, daily RSI(14) under 35, volume above 2.5 times its own norm.</td>
+        <td>2 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">coppock</th>
+        <td>bottom</td>
+        <td>The Coppock curve: a 10-period weighted moving average of the sum of the 14-month and 11-month rates of change, computed on monthly closes.</td>
+        <td>2 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">drawdown percentile</th>
+        <td>bottom</td>
+        <td>Current drawdown from the running peak, ranked against every drawdown the asset has experienced.</td>
+        <td>5 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">euphoria rollover</th>
+        <td>top</td>
+        <td>A trend break counted only right after euphoria — the mirror of the capitulation flush&#39;s hole gate, applied to the top side.</td>
+        <td>2 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">monthly rsi divergence</th>
+        <td>top and bottom</td>
+        <td>Wilder RSI(14) on monthly closes, checked for divergence against price.</td>
+        <td>2 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">price vs 200dma z</th>
+        <td>top and bottom</td>
+        <td>Z-score of the percentage distance between price and its 200-day moving average, measured against the asset&#39;s own history of that distance.</td>
+        <td>5 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">price vs 200wma z</th>
+        <td>top and bottom</td>
+        <td>The weekly-scale twin of price_vs_200dma_z: z-score of the distance between the weekly close and its 200-week moving average.</td>
+        <td>5 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">runup percentile</th>
+        <td>top</td>
+        <td>Trailing 12-month return ranked against the asset&#39;s own history.</td>
+        <td>1 asset</td>
+      </tr>
+      <tr>
+        <th scope="row">volume capitulation</th>
+        <td>bottom</td>
+        <td>A volume spike on a sharp down day: volume at least three standard deviations above its own recent history while the day&#39;s return is worse than minus three percent.</td>
+        <td>0 assets</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+<details>
+  <summary>Valuation (9)</summary>
+  <table>
+    <caption>Valuation indicators</caption>
+    <thead>
+      <tr>
+        <th scope="col">Indicator</th>
+        <th scope="col">Side</th>
+        <th scope="col">What it measures</th>
+        <th scope="col">Currently admitted on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">cape percentile</th>
+        <td>top and bottom</td>
+        <td>Shiller&#39;s cyclically adjusted P/E for the S&amp;P 500 — price against ten years of inflation-adjusted earnings, monthly since 1871.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">copper gold ratio</th>
+        <td>top and bottom</td>
+        <td>Murphy&#39;s copper-to-gold growth-versus-fear gauge, scored as a mean-reversion extreme: copper over gold, ranked against its own history.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">credit spread percentile</th>
+        <td>top and bottom</td>
+        <td>Moody&#39;s Baa corporate bond yield minus the 10-year Treasury — the classic academic credit-spread series, daily since 1986.</td>
+        <td>1 asset</td>
+      </tr>
+      <tr>
+        <th scope="row">gold cpi ratio</th>
+        <td>top and bottom</td>
+        <td>Gold&#39;s price per unit of the US consumer price level — is the metal expensive against the goods it is supposed to store value in? Monthly, with CPI lagged one month for its publication delay; CPI history since 1947 supports the gold futures splice back to 2000 and the ETF era.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">gold real yield</th>
+        <td>top and bottom</td>
+        <td>Gold against its strongest fundamental driver.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">gold silver ratio</th>
+        <td>top and bottom</td>
+        <td>Gold priced in silver, the oldest relative-value ratio in metals.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">nifty pe percentile</th>
+        <td>top and bottom</td>
+        <td>The Nifty 50&#39;s trailing price-to-earnings ratio, from NSE&#39;s official series running since 1999 — a history that includes the 2000 and 2008 valuation extremes at both ends.</td>
+        <td>0 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">price vs m2</th>
+        <td>top and bottom</td>
+        <td>The asset&#39;s price divided by the previous month&#39;s US M2 money stock — price per unit of liquidity rather than price per dollar.</td>
+        <td>5 assets</td>
+      </tr>
+      <tr>
+        <th scope="row">stocks bonds ratio</th>
+        <td>top and bottom</td>
+        <td>Murphy&#39;s stocks-to-bonds risk-appetite gauge, scored as a mean-reversion extreme: US large-cap price over long-Treasury price, ranked against its own history.</td>
+        <td>0 assets</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<p class="note">As of Tuesday 21 July 2026. <a href="index.html">Back to the dashboard.</a></p>
+
+</body>
+</html>
